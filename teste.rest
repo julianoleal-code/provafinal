@@ -1,0 +1,34 @@
+@id = 8
+
+### Criar endereço
+POST http://localhost:3000/api/enderecos
+Content-Type: application/json
+
+{
+  "rua": "Rua da Goiaba",
+  "numero": 123,
+  "bairro": "Centro",
+  "cidade": "Barra Mansa",
+  "estado": "RJ"
+}
+
+### Listar endereços
+GET http://localhost:3000/api/enderecos
+
+### Buscar por ID
+GET http://localhost:3000/api/enderecos/{{id}}
+
+### Atualizar endereço
+PUT http://localhost:3000/api/enderecos/{{id}}
+Content-Type: application/json
+
+{
+  "rua": "Avenida Principal",
+  "numero": 456,
+  "bairro": "Jardim Botânico",
+  "cidade": "Rio de Janeiro",
+  "estado": "RJ"
+}
+
+### Deletar endereço
+DELETE http://localhost:3000/api/enderecos/{{id}}
